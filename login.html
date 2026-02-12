@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona logowania</title>
+    <link rel="stylesheet" href="login_styl.css">
+    <script>
+        function Wyslij()
+{
+    event.preventDefault(); 
+
+    let haslo = document.getElementById('password').value;
+    let login = document.getElementById('login').value;
+
+    if(login === "Maja" && haslo === "Jagiellonia")
+    {
+        window.location.href = "main.html";
+    }
+    else
+{
+    document.getElementById("blad").innerText = 
+    "Błędny login lub hasło. Podpowiedź: imię i ukochany klub z Białegostoku";
+}
+
+}
+
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Logowanie</h2>
+        <p id="blad" style="color:red;"></p>
+
+            <div class="input-bubble">
+                <input type="text" id="login" name="login" >
+                <label for="login">Login</label>
+            </div>
+            <div class="input-bubble">
+                <input type="password" id="password" name="password">
+                <label for="password">Hasło</label>
+            </div>
+            <button type="button" onclick="Wyslij()">Zaloguj się</button>
+    </div>
+</body>
+</html>
+ 

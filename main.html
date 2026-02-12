@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynki</title>
+    <link rel="stylesheet" href="st.css">
+    <script>
+        function Tak()
+        {
+ window.location.href = "https://tenor.com/pl/view/cat-gif-16606050094708454978";
+        }
+        function Nie()
+        {
+              let nieBtn = document.getElementById('Nie');
+            const maxX = window.innerWidth - nieBtn.offsetWidth;
+            const maxY = window.innerHeight - nieBtn.offsetHeight;
+
+            const randX = Math.floor(Math.random() * maxX);
+            const randY = Math.floor(Math.random() * maxY);
+
+            nieBtn.style.position = 'absolute';
+            nieBtn.style.left = randX + 'px';
+            nieBtn.style.top = randY + 'px';
+        }
+    </script>
+</head>
+<body>
+<img src="cat-smile.gif" alt="Gif">
+
+    <h1>Czy zostaniesz moją walentynką?</h1>
+    <button id="Tak" onclick="Tak()">Tak</button>
+    <button id="Nie" onclick="Nie()">Nie</button>
+
+</body>
+</html>
